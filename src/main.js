@@ -9,9 +9,11 @@ import '@/assets/css/reset.css'
 import '@/assets/css/animate.min.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import http from './assets/js/api'
+
 import VueParticles from 'vue-particles'    // 登陆页面动态效果
 
-
+Vue.prototype.$http = http
 
 
 Vue.use(VueParticles)

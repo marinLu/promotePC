@@ -59,10 +59,14 @@
         created() {
         },
         mounted() {
+
         },
         methods: {
           toHome(){
             this.$router.push('/home')
+          },
+          test(){
+            console.log(this.$http)
           }
         }
     }
@@ -103,7 +107,7 @@
   .button{
     color: #fff;
     margin-top: 50px;
-    width: 58%;
+    width: 30%;
     background-image:linear-gradient(to right, #F8D818 50% ,   deeppink 100%);
   }
 </style>
