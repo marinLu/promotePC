@@ -5,6 +5,7 @@ import Router from 'vue-router'
 
 import login from '@/components/reg/login'
 import home from '@/components/home/index'
+import treeTable from '@/components/tree/treeTable'
 
 Vue.use(Router)
 
@@ -16,9 +17,9 @@ export default new Router({
       component: login
     },
     {
-      path: '/home',
-      name: 'home',
-      component: home
+      path: '/treeTable',
+      name: 'treeTable',
+      component: treeTable
     }
   ]
 })

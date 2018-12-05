@@ -63,7 +63,7 @@
         },
         methods: {
           toHome(){
-            this.$router.push('/home')
+            this.$router.push('/treeTable')
           },
           test(){
             console.log(this.$http)
