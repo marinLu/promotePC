@@ -8,10 +8,10 @@
             <div v-if="scope.row._level == 1">
               <span v-for="(space, levelIndex) of scope.row._level" class="" :key="levelIndex"></span>
               <span v-if="toggleIconShow(scope.$index,scope.row)">
-            <i v-if="scope.row._expanded==false" class="el-icon-caret-right" aria-hidden="true"></i>
-            <i v-if="scope.row._expanded==true" class="el-icon-caret-bottom" aria-hidden="true"></i>
-            {{scope.row.department}}
-          </span>
+                <i v-if="scope.row._expanded==false" class="el-icon-caret-right" aria-hidden="true"></i>
+                <i v-if="scope.row._expanded==true" class="el-icon-caret-bottom" aria-hidden="true"></i>
+                {{scope.row.department}}
+              </span>
             </div>
           </div>
         </template>

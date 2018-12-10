@@ -8,6 +8,7 @@ import ElementUI from 'element-ui'
 
 import '@/assets/css/reset.css'
 import '@/assets/css/animate.min.css'
+import '@/assets/css/temp.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import http from './assets/js/api'
