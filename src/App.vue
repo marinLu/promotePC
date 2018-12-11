@@ -5,10 +5,16 @@
         <div class="imgBox">
           <img class="" src="./assets/image/111.png" alt="">
         </div>
-        <ul>
-          <li>树形表格</li>
-          <li>多选框</li>
-        </ul>
+        <el-menu class="side-menu"
+                 mode="vertical"
+                 :default-active="$route.path"
+                 active-text-color="#000"
+                 unique-opened
+                 router>
+          <template v-for="item in $router.options.routes">
+            <el-menu-item :index="item.path" v-if="!item.hidden">{{item.name}}</el-menu-item>
+          </template>
+        </el-menu>
       </el-aside>
       <el-container>
         <el-header  v-show="$route.meta.header">
@@ -26,7 +32,7 @@
 export default {
   name: 'App',
   mounted () {
-    console.log(this.$route)
+    console.log(this.$router)
   }
 }
 </script>

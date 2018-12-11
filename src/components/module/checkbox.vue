@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="item in ceshi" style="margin: 50px">
-      <el-checkbox v-model="item.isChecked"  @change="chooseVillage()"></el-checkbox>
+      <el-checkbox v-model="item.isChecked"  @change="chooseVillage()">{{item.value}}</el-checkbox>
     </li>
   </ul>
 </template>

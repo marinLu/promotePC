@@ -15,18 +15,19 @@ export default new Router({
     {
       path: '/',
       name: 'login',
+      hidden: true,
       meta: {Aside:false,header:false},
       component: login
     },
     {
       path: '/treeTable',
-      name: 'treeTable',
+      name: '树形表格',
       meta: {Aside:true,header:true},
       component: treeTable
     },
     {
       path: '/checkbox',
-      name: 'checkbox',
+      name: '多选框',
       meta: {Aside:true,header:true},
       component: checkbox
     }
