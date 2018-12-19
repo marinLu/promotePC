@@ -7,9 +7,9 @@ var that = new Vue()
 
 // axios 配置
 axios.defaults.timeout = 10000;
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-axios.defaults.baseURL = ''; // 请求根路径
-axios.defaults.withCredentials = false;
+axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
+axios.defaults.baseURL = 'http://localhost:5000/api/'; // 请求根路径
+axios.defaults.method = 'POST'
 
 
 //POST传参序列化
@@ -46,8 +46,21 @@ axios.interceptors.response.use((res) => {
   return Promise.reject(error);
 });
 
-
-export default function fetch(url, params) {
+// 读取cookie
+let getCookie = function (name) {
+  var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'))
+  if (arr != null) {
+    return unescape(arr[2])
+  } else {
+    return null
+  }
+}
+export default function (url, params) {
+  params.head = {
+    platform: 'web',
+    timestamp: new Date().getTime(),
+    token: getCookie('access-token')
+  }
   return new Promise((resolve, reject) => {
     axios.post(url, params)
       .then(response => {

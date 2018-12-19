@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import url from './url.js'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-    homeTitle: ''
+    homeTitle: '',
+    url:url
   },
   getters: {
     getHomeTitle (state) {

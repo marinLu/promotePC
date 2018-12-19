@@ -63,7 +63,13 @@
         },
         methods: {
           toHome(){
-            this.$router.push('/checkbox')
+            // this.$router.push('/checkbox')
+            let params = {}
+            params.userName=this.userName,
+            params.password=this.password
+            this.$http(this.$store.state.url.test, params).then(data => {
+              console.log(data)
+            })
           },
           test(){
             console.log(this.$http)
