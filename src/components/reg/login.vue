@@ -37,7 +37,8 @@
           <el-col :span="12">
             <el-input
               placeholder="请输入用户名"
-              v-model="password">
+              v-model="password"
+            type="password">
             </el-input>
           </el-col>
         </el-row>
@@ -63,7 +64,7 @@
         },
         methods: {
           toHome(){
-            // this.$router.push('/checkbox')
+            this.$router.push('/checkbox')
             let params = {}
             params.userName=this.userName,
             params.password=this.password
