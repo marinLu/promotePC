@@ -8,7 +8,7 @@ var that = new Vue()
 // axios 配置
 axios.defaults.timeout = 10000;
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
-axios.defaults.baseURL = 'http://localhost:5000/api/'; // 请求根路径
+axios.defaults.baseURL = 'http://220.248.34.75:5000/api/'; // 请求根路径
 axios.defaults.method = 'POST'
 
 

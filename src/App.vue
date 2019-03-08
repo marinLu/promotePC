@@ -20,7 +20,7 @@
         <el-header  v-show="$route.meta.header">
             固定的头部
         </el-header>
-        <el-main>
+        <el-main style="background: #d3d3d3;height: 100%">
           <router-view/>
         </el-main>
       </el-container>
@@ -48,14 +48,15 @@ export default {
   height: 100%;
 }
   .el-aside {
-    background: lightpink;
+    background: #303133;
   }
   .el-header{
-    background: deeppink;
+    color: #ddd;
+    background:  #2c3e50;
     text-align: center;
     font-weight: bold;
     font-size: 36px;
-    height: 100px !important;
+    height: 102px !important;
     line-height: 100px;
   }
 .imgBox{

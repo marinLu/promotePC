@@ -8,6 +8,7 @@ import checkbox from '@/components/module/checkbox'
 import home from '@/components/home/index'
 import treeTable from '@/components/tree/treeTable'
 import cascader from '@/components/module/cascader'
+import wave from '@/components/module/wave'
 
 Vue.use(Router)
 
@@ -37,6 +38,12 @@ export default new Router({
       name: '级联选择器',
       meta: {Aside:true,header:true},
       component: cascader
+    },
+    {
+      path: '/wave',
+      name: '粒子波浪',
+      meta: {Aside:false,header:false},
+      component: wave
     }
   ]
 })
