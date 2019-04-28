@@ -28,7 +28,7 @@
           <el-col :span="12">
             <el-input
             placeholder="请输入用户名"
-            v-model="userName">
+            v-model="userName" v-focus>
           </el-input>
           </el-col>
         </el-row>
@@ -61,6 +61,13 @@
         },
         mounted() {
 
+        },
+        directives: {
+          focus: {
+            inserted: function (el) {
+              el.focus()
+            }
+          }
         },
         methods: {
           toHome(){

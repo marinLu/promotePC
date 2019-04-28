@@ -5,7 +5,7 @@ import Router from 'vue-router'
 
 import login from '@/components/reg/login'
 import checkbox from '@/components/module/checkbox'
-import home from '@/components/home/index'
+// import home from '@/components/home/index'
 import treeTable from '@/components/tree/treeTable'
 import cascader from '@/components/module/cascader'
 import wave from '@/components/module/wave'
